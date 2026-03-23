@@ -19,6 +19,9 @@
 		9F67B99210B7AF9921D30D09 /* CashflowCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491C7344DDA56134205C8F2 /* CashflowCoachTests.swift */; };
 		A36F309F4A231017C189C7E7 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 667B2FECD25F669B3D67DA50 /* RevenueCat */; };
 		3AE5A2642CEDA1C54B9524AB /* PostHog in Frameworks */ = {isa = PBXBuildFile; productRef = 542E0E37AF1259C5C24C1966 /* PostHog */; };
+		CC0002000000000000000002 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000001 /* Models.swift */; };
+		CC0002000000000000000005 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000004 /* PersistenceController.swift */; };
+		CC0002000000000000000008 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000007 /* AppModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		CC0001000000000000000001 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configs/Debug.xcconfig; sourceTree = "<group>"; };
 		CC0001000000000000000002 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configs/Release.xcconfig; sourceTree = "<group>"; };
 		CC0001000000000000000003 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = Configs/Shared.xcconfig; sourceTree = "<group>"; };
+		CC0002000000000000000001 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		CC0002000000000000000004 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		CC0002000000000000000007 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				AEA21855AAE50C6D6DBB143B /* AppCoordinator.swift */,
+				CC0002000000000000000007 /* AppModel.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -154,6 +161,8 @@
 		6428A7F25C70A43CE6D0EA7B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CC0002000000000000000003 /* Models */,
+				CC0002000000000000000006 /* Persistence */,
 				CC0001000000000000000020 /* Repositories */,
 			);
 			path = Data;
@@ -165,6 +174,22 @@
 				3C1C2905189116C6F34E8EC0 /* Repositories.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CC0002000000000000000003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC0002000000000000000001 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC0002000000000000000006 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				CC0002000000000000000004 /* PersistenceController.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		F51F7DB7A04167CC37AA841E /* Integrations */ = {
@@ -314,6 +339,9 @@
 				E4D5AB59A9260E41CA82FB4C /* CashflowCore.swift in Sources */,
 				24FA919415AD053982EB757B /* Repositories.swift in Sources */,
 				3D645B46BD2EFB1072142AE9 /* AnalyticsService.swift in Sources */,
+				CC0002000000000000000002 /* Models.swift in Sources */,
+				CC0002000000000000000005 /* PersistenceController.swift in Sources */,
+				CC0002000000000000000008 /* AppModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
