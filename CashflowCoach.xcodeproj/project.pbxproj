@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4000152C069EB93CAEFAACE /* CashflowCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878474EE137D71C487090E38 /* CashflowCoachApp.swift */; };
+		0F34764D4CA2A8D565E9819C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBE8855C4D4C4D8100780F8 /* ContentView.swift */; };
+		F4010B77582D8D9A116DA468 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3145EDBCC5D0CA7A2150FC70 /* RootView.swift */; };
+		D2260228C2C41F59BA776BC4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA21855AAE50C6D6DBB143B /* AppCoordinator.swift */; };
+		E4D5AB59A9260E41CA82FB4C /* CashflowCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48815C39CD0A3C56064B35D7 /* CashflowCore.swift */; };
+		24FA919415AD053982EB757B /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C2905189116C6F34E8EC0 /* Repositories.swift */; };
+		3D645B46BD2EFB1072142AE9 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3693C83B179DD6990B03E2 /* AnalyticsService.swift */; };
+		C5CACA5955A5E6CFC223889C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C951E0F6049D00803F4AB93 /* Assets.xcassets */; };
+		2D67D126B23BAA76B1F530C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF1E6779E4C31BDAC3464E5 /* Preview Assets.xcassets */; };
+		9F67B99210B7AF9921D30D09 /* CashflowCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491C7344DDA56134205C8F2 /* CashflowCoachTests.swift */; };
+		A36F309F4A231017C189C7E7 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 667B2FECD25F669B3D67DA50 /* RevenueCat */; };
+		3AE5A2642CEDA1C54B9524AB /* PostHog in Frameworks */ = {isa = PBXBuildFile; productRef = 542E0E37AF1259C5C24C1966 /* PostHog */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B18F8BB53A02D54B439FE10 /* CashflowCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashflowCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AD4BF373CFA489189B0974F /* CashflowCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashflowCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		878474EE137D71C487090E38 /* CashflowCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashflowCoachApp.swift; sourceTree = "<group>"; };
+		FBBE8855C4D4C4D8100780F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3145EDBCC5D0CA7A2150FC70 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		AEA21855AAE50C6D6DBB143B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		48815C39CD0A3C56064B35D7 /* CashflowCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashflowCore.swift; sourceTree = "<group>"; };
+		3C1C2905189116C6F34E8EC0 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		3A3693C83B179DD6990B03E2 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		9C951E0F6049D00803F4AB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DF1E6779E4C31BDAC3464E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E491C7344DDA56134205C8F2 /* CashflowCoachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashflowCoachTests.swift; sourceTree = "<group>"; };
+		CC0001000000000000000001 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Configs/Debug.xcconfig; sourceTree = "<group>"; };
+		CC0001000000000000000002 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Configs/Release.xcconfig; sourceTree = "<group>"; };
+		CC0001000000000000000003 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Shared.xcconfig; path = Configs/Shared.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		710F44DA2F6CABC3DEF07015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A36F309F4A231017C189C7E7 /* RevenueCat in Frameworks */,
+				3AE5A2642CEDA1C54B9524AB /* PostHog in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5E7CB01E42AEB43627D4DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5928955287B8089ED2177128 = {
+			isa = PBXGroup;
+			children = (
+				CD18B868BB515C3FF6E65C32 /* CashflowCoach */,
+				8F31C73D90E2A9A9741F91EE /* CashflowCoachTests */,
+				CC0001000000000000000010 /* Configs */,
+				BF7A2D27A78D590BDEF15AF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF7A2D27A78D590BDEF15AF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B18F8BB53A02D54B439FE10 /* CashflowCoach.app */,
+				9AD4BF373CFA489189B0974F /* CashflowCoachTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC0001000000000000000010 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				CC0001000000000000000003 /* Shared.xcconfig */,
+				CC0001000000000000000001 /* Debug.xcconfig */,
+				CC0001000000000000000002 /* Release.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		CD18B868BB515C3FF6E65C32 /* CashflowCoach */ = {
+			isa = PBXGroup;
+			children = (
+				095FEE2E633C50D24407F2D6 /* App */,
+				053946F24B909DD6794B8AE7 /* Presentation */,
+				83DD40E051961B65C4F38D50 /* Application */,
+				840E4C7F83D8A80EC003E8D0 /* Domain */,
+				6428A7F25C70A43CE6D0EA7B /* Data */,
+				F51F7DB7A04167CC37AA841E /* Integrations */,
+				0ECEC165EE4DFB177DC80E73 /* Resources */,
+			);
+			path = CashflowCoach;
+			sourceTree = "<group>";
+		};
+		095FEE2E633C50D24407F2D6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				878474EE137D71C487090E38 /* CashflowCoachApp.swift */,
+				FBBE8855C4D4C4D8100780F8 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		053946F24B909DD6794B8AE7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				88CC6B2559B28E20B5452DA8 /* Shell */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		88CC6B2559B28E20B5452DA8 /* Shell */ = {
+			isa = PBXGroup;
+			children = (
+				3145EDBCC5D0CA7A2150FC70 /* RootView.swift */,
+			);
+			path = Shell;
+			sourceTree = "<group>";
+		};
+		83DD40E051961B65C4F38D50 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AEA21855AAE50C6D6DBB143B /* AppCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		840E4C7F83D8A80EC003E8D0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				267226FF84DB1A76BCC761CE /* CashflowCore */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		267226FF84DB1A76BCC761CE /* CashflowCore */ = {
+			isa = PBXGroup;
+			children = (
+				48815C39CD0A3C56064B35D7 /* CashflowCore.swift */,
+			);
+			path = CashflowCore;
+			sourceTree = "<group>";
+		};
+		6428A7F25C70A43CE6D0EA7B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CC0001000000000000000020 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CC0001000000000000000020 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3C1C2905189116C6F34E8EC0 /* Repositories.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F51F7DB7A04167CC37AA841E /* Integrations */ = {
+			isa = PBXGroup;
+			children = (
+				77DC223CD098F4E0386C2D34 /* Analytics */,
+			);
+			path = Integrations;
+			sourceTree = "<group>";
+		};
+		77DC223CD098F4E0386C2D34 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				3A3693C83B179DD6990B03E2 /* AnalyticsService.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		0ECEC165EE4DFB177DC80E73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C951E0F6049D00803F4AB93 /* Assets.xcassets */,
+				6DF1E6779E4C31BDAC3464E5 /* Preview Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8F31C73D90E2A9A9741F91EE /* CashflowCoachTests */ = {
+			isa = PBXGroup;
+			children = (
+				E491C7344DDA56134205C8F2 /* CashflowCoachTests.swift */,
+			);
+			path = CashflowCoachTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		131A2C91E218714B600E74BB /* CashflowCoach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 300E02446C6DE0691EE16338 /* Build configuration list for PBXNativeTarget "CashflowCoach" */;
+			buildPhases = (
+				27D0AF08AE6F6748DDD5F15B /* Sources */,
+				710F44DA2F6CABC3DEF07015 /* Frameworks */,
+				48E008181E402C65408BA134 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CashflowCoach;
+			packageProductDependencies = (
+				667B2FECD25F669B3D67DA50 /* RevenueCat */,
+				542E0E37AF1259C5C24C1966 /* PostHog */,
+			);
+			productName = CashflowCoach;
+			productReference = 1B18F8BB53A02D54B439FE10 /* CashflowCoach.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA128F9D3C0D15FFB32AEEA8 /* CashflowCoachTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD5B959833E219C36151D647 /* Build configuration list for PBXNativeTarget "CashflowCoachTests" */;
+			buildPhases = (
+				865D74906C46D867F07F8170 /* Sources */,
+				FF5E7CB01E42AEB43627D4DD /* Frameworks */,
+				AB1C44CAB45EECC068442A79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CashflowCoachTests;
+			productName = CashflowCoachTests;
+			productReference = 9AD4BF373CFA489189B0974F /* CashflowCoachTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46F86FAA6BBF9AC94A7E4595 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					131A2C91E218714B600E74BB = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					BA128F9D3C0D15FFB32AEEA8 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 131A2C91E218714B600E74BB;
+					};
+				};
+			};
+			buildConfigurationList = 2CA666E9AB7FD185F98B8152 /* Build configuration list for PBXProject "CashflowCoach" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5928955287B8089ED2177128;
+			packageReferences = (
+				4AA42C4EA4CB2A2B252E79A0 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+				1076160DAC1CAFB30BC4281C /* XCRemoteSwiftPackageReference "posthog-ios" */,
+			);
+			productRefGroup = BF7A2D27A78D590BDEF15AF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				131A2C91E218714B600E74BB /* CashflowCoach */,
+				BA128F9D3C0D15FFB32AEEA8 /* CashflowCoachTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48E008181E402C65408BA134 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CACA5955A5E6CFC223889C /* Assets.xcassets in Resources */,
+				2D67D126B23BAA76B1F530C9 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB1C44CAB45EECC068442A79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27D0AF08AE6F6748DDD5F15B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4000152C069EB93CAEFAACE /* CashflowCoachApp.swift in Sources */,
+				0F34764D4CA2A8D565E9819C /* ContentView.swift in Sources */,
+				F4010B77582D8D9A116DA468 /* RootView.swift in Sources */,
+				D2260228C2C41F59BA776BC4 /* AppCoordinator.swift in Sources */,
+				E4D5AB59A9260E41CA82FB4C /* CashflowCore.swift in Sources */,
+				24FA919415AD053982EB757B /* Repositories.swift in Sources */,
+				3D645B46BD2EFB1072142AE9 /* AnalyticsService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		865D74906C46D867F07F8170 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F67B99210B7AF9921D30D09 /* CashflowCoachTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		32BFB186853488E1A93682F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 6;
+			};
+			name = Debug;
+		};
+		6BF9E70A1F928ABA143EF1EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		801693B1D56B19D77272B3C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CashflowCoach/Resources/Preview Assets.xcassets\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CashflowCoach;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashflowcoach.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		632C407F955841F59C0D9716 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CashflowCoach/Resources/Preview Assets.xcassets\"";
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CashflowCoach;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashflowcoach.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0C2C8A1B84890B5DDF8EC8B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashflowcoach.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashflowCoach.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CashflowCoach";
+			};
+			name = Debug;
+		};
+		7E764AA6B7529530855F0373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cashflowcoach.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashflowCoach.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CashflowCoach";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CA666E9AB7FD185F98B8152 /* Build configuration list for PBXProject "CashflowCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32BFB186853488E1A93682F0 /* Debug */,
+				6BF9E70A1F928ABA143EF1EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		300E02446C6DE0691EE16338 /* Build configuration list for PBXNativeTarget "CashflowCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				801693B1D56B19D77272B3C6 /* Debug */,
+				632C407F955841F59C0D9716 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD5B959833E219C36151D647 /* Build configuration list for PBXNativeTarget "CashflowCoachTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C2C8A1B84890B5DDF8EC8B1 /* Debug */,
+				7E764AA6B7529530855F0373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4AA42C4EA4CB2A2B252E79A0 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		1076160DAC1CAFB30BC4281C /* XCRemoteSwiftPackageReference "posthog-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PostHog/posthog-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		667B2FECD25F669B3D67DA50 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AA42C4EA4CB2A2B252E79A0 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+		542E0E37AF1259C5C24C1966 /* PostHog */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1076160DAC1CAFB30BC4281C /* XCRemoteSwiftPackageReference "posthog-ios" */;
+			productName = PostHog;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+	};
+	rootObject = 46F86FAA6BBF9AC94A7E4595 /* Project object */;
+}
