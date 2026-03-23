@@ -1,0 +1,45 @@
+# Xcode
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Build products
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# SPM
+.build/
+.swiftpm/
+SourcePackages/
+
+# Environment / secrets (never commit real credentials)
+Env.local
+*.env
+.env.*
+!.env.example
+!Env.example
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# CocoaPods (not used, but just in case)
+Pods/
+Podfile.lock
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Carthage
+Carthage/Build/
+
+# Swift Package Manager resolved (check in for apps)
+# Package.resolved is intentionally NOT ignored for reproducible builds

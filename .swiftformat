@@ -1,0 +1,25 @@
+# .swiftformat
+# https://github.com/nicklockwood/SwiftFormat
+
+--swiftversion 6.0
+--indent 4
+--tabwidth 4
+--smarttabs enabled
+--allman false
+--wraparguments before-first
+--wrapparameters before-first
+--wrapcollections before-first
+--closingparen same-line
+--funcattributes prev-line
+--typeattributes prev-line
+--varattributes same-line
+--maxwidth 120
+--trimwhitespace always
+--stripunusedargs closure-only
+--self remove
+--importgrouping testable-last
+--enable isEmpty
+--enable isLowercase
+--enable trailingCommas
+--disable redundantReturn
+--exclude .build,DerivedData,Pods

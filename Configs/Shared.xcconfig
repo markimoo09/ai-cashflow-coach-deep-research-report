@@ -1,0 +1,20 @@
+// Shared.xcconfig
+// Settings applied to ALL configurations and ALL targets.
+
+IPHONEOS_DEPLOYMENT_TARGET = 18.0
+SWIFT_VERSION = 6
+SWIFT_STRICT_CONCURRENCY = complete
+
+PRODUCT_BUNDLE_IDENTIFIER = com.cashflowcoach.app
+DEVELOPMENT_TEAM =
+
+// Enable modules and ARC
+CLANG_ENABLE_MODULES = YES
+CLANG_ENABLE_OBJC_ARC = YES
+
+// Dead-code stripping
+DEAD_CODE_STRIPPING = YES
+
+// Warnings as errors in CI (override per target if needed)
+SWIFT_TREAT_WARNINGS_AS_ERRORS = NO
+GCC_TREAT_WARNINGS_AS_ERRORS = NO
